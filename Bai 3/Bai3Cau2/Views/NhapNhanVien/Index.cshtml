@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center">Câu 3</h3>
+
+<form method="post" action="~/NhapNhanVien/Output">
+    <table border="1" class="table_style">
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Mã Nhân Viên</b></p>
+            </td>
+            <td>
+                <input type="text" class="input_style" name="maNhanVien"/>
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Họ tên</b></p>
+            </td>
+            <td>
+                <input type="text" class="input_style" name="hoTen" />
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Ngày sinh</b></p>
+            </td>
+            <td>
+                <input type="date" class="input_style" name="ngaySinh" />
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Giới tính</b></p>
+            </td>
+            <td>
+                <input type="radio" name="gioitinh" id="nam" class="radio_style" value="Nam"/>
+                <label for="nam">Nam</label>
+                <input type="radio" name="gioitinh" id="nu" class="radio_style" value="Nữ"/>
+                <label for="nu">Nữ</label>
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Chức vụ</b></p>
+            </td>
+            <td>
+                <select class="input_style" style="padding: 5px 0px;" name="chucVu">
+                    <option value="Trưởng Phòng">Trưởng Phòng</option>
+                    <option value="Phó Trưởng Phòng">Phó Trưởng Phòng</option>
+                    <option value="Nhân Viên">Nhân Viên</option>
+                </select>
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Ngày sinh</b></p>
+            </td>
+            <td>
+                <input type="checkbox" name="ngoaingu" id="anh" class="radio_style" value="Tiếng Anh"/>
+                <label for="anh">Tiếng Anh</label>
+                <input type="checkbox" name="ngoaingu" id="phap" class="radio_style" value="Tiếng Pháp" />
+                <label for="phap">Tiếng Pháp</label>
+                <input type="checkbox" name="ngoaingu" id="nga" class="radio_style" value="Tiếng Nga" />
+                <label for="nga">Tiếng Nga</label>
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td colspan="2" align="center">
+                <input type="submit" value="Lưu" class="btn btn-success button_style"/>
+                <input type="reset" value="Xóa" class="btn btn-warning button_style"/>
+            </td>
+        </tr>
+    </table>
+</form>
+

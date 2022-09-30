@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Câu 1</h2>
+
+<p>MVC là từ viết tắt bởi 3 từ Model – View – Controller. Đây là mô hình thiết kế sử dụng trong kỹ thuật phần mềm. Mô hình source code thành 3 phần, tương ứng mỗi từ. Mỗi từ tương ứng với một hoạt động tách biệt trong một mô hình.</p>
+
+<h3>Các thành phần cấu tạo trong mô hình MVC</h3>
+<h4>View</h4>
+    View là một phần của ứng dụng chịu trách nhiệm cho việc trình bày dữ liệu. Thành phần này được tạo bởi dữ liệu thu thập từ dữ liệu mô hình, và giúp người dùng có cái nhìn trực quan về trang web, cũng như ứng dụng.
+
+    View cũng đại diện cho dữ liệu từ các cuộc trò chuyện, sơ đồ và bảng. Ví dụ: bất kỳ View nào cũng sẽ bao gồm tất cả các thành phần giao diện người dùng như một nút bấm, khung nhập, menu, hình ảnh,…
+
+<h4>Model</h4>
+    Phần Model của kiến trúc MVC là thành phần chính đảm nhiệm chức năng lưu trữ dữ liệu và các bộ phận logic liên quan của toàn bộ ứng dụng. Model chịu trách nhiệm cho các thao tác dữ liệu giữa Controller hoặc bất kỳ logic nghiệp vụ liên quan nào khác như: cho phép xem, truy xuất dữ liệu,… Ví dụ, Controller sẽ lấy thông tin khách hàng từ cơ sở dữ liệu. Model sẽ thực hiện các thao tác dữ liệu và gửi lại cơ sở dữ liệu hoặc sử dụng nó cho View.
+
+<h4>Controller</h4>
+    Đây là phần xử lý tương tác người dùng của ứng dụng. Controller xử lý dữ liệu đầu vào từ bàn phím và chuột của người dùng sau đó thông báo tới View và Model. Sau đó liền gửi các lệnh tới Model để thay đổi trạng thái của Model (Ví dụ: lưu một tài liệu cụ thể). Controller cũng gửi các lệnh tương tự tới View để thực hiện các thay đổi về giao diện.

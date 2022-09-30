@@ -1,0 +1,60 @@
+﻿@model Bai3Cau2.Models.NhanVien
+
+@{
+    ViewBag.Title = "Output";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Output</h2>
+<form method="post" action="~/NhapNhanVien/Output">
+    <table border="1" class="table_style">
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Mã Nhân Viên</b></p>
+            </td>
+            <td>
+                <p>@Model.maNhanVien</p>
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Họ tên</b></p>
+            </td>
+            <td>
+                <p>@Model.hoTen</p>
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Ngày sinh</b></p>
+            </td>
+            <td>
+                <p>@Model.ngaySinh.ToShortDateString()</p>
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Chức Vụ</b></p>
+            </td>
+            <td>
+                <p>@Model.chucVu</p>
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Giới Tính</b></p>
+            </td>
+            <td>
+                <p>@Model.gioiTinh</p>
+            </td>
+        </tr>
+        <tr class="table_row">
+            <td>
+                <p class="title_content"><b>Ngoại ngữ</b></p>
+            </td>
+            <td>
+                <p>@Model.ngoaiNgu</p>
+            </td>
+        </tr>
+    </table>
+</form>

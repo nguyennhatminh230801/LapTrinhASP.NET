@@ -1,0 +1,45 @@
+﻿.main_content {
+    border: 2px solid rebeccapurple;
+    margin-block: 10px 0px;
+}
+
+.header {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.purple_header {
+    color: rebeccapurple;
+}
+
+.second_header {
+    padding: 20px 0px;
+}
+
+.big_category {
+    background-color: rebeccapurple;
+}
+
+.big_category_content {
+    padding: 6px 0px;
+    color: white;
+}
+
+.table_row {
+    width: 100%;
+    border-top: 10px solid;
+    border-bottom: 10px solid;
+    border-color: transparent;
+}
+
+.inner_content_row {
+    display: flex;
+    flex: 1;
+    justify-items: center;
+    align-items: center;
+}
+
+.title{
+    padding: 0px 10px;
+}

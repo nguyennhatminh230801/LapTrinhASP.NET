@@ -1,0 +1,36 @@
+﻿*{
+    box-sizing: border-box;
+}
+
+
+.title_content {
+    padding: 0px 10px;
+}
+
+.table_style {
+    width: 50%;
+    margin: auto;
+}
+
+.table_row {
+    width: 100%;
+}
+
+.input_style {
+    margin: 5px;
+    width: 300px;
+}
+
+.radio_style {
+    margin: 0px 10px;
+}
+
+.button_row_style {
+
+}
+
+.button_style {
+    width: 100px;
+    height: 50px;
+    border: 10px solid transparent;
+}
