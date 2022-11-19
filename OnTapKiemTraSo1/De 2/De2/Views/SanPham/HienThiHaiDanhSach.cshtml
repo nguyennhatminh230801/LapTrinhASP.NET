@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "HienThiHaiDanhSach";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>HienThiHaiDanhSach</h2>
+
+<h3>Danh sách 1</h3>
+<table border="1" style="width: 75%; margin: auto;">
+    <thead>
+        <tr>
+            <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (De2.Models.SanPham item in Model)
+        {
+            if (item.SoLuong > 60)
+            {
+                <tr>
+                    <td>@item.MaSP</td>
+                    <td>@item.TenSP</td>
+                    <td>@item.SoLuong</td>
+                    <td>@item.GiaTien</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<h3>Danh sách 2</h3>
+<table border="1" style="width: 75%; margin: auto;">
+    <thead>
+        <tr>
+            <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (De2.Models.SanPham item in Model)
+        {
+            if (item.GiaTien < 200)
+            {
+                <tr>
+                    <td>@item.MaSP</td>
+                    <td>@item.TenSP</td>
+                    <td>@item.SoLuong</td>
+                    <td>@item.GiaTien</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

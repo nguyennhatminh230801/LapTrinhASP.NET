@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align: center;">Nhập thông tin hàng</h2>
+<style>
+    .form_table {
+        width: 50%;
+        margin: auto;
+    }
+</style>
+
+<form method="post" action="~/Cau1/Output">
+    <table border="1" cellpadding="10" cellspacing="10" class="form_table">
+        <tr>
+            <th>Mã hàng:</th>
+            <td><input type="text" name="maHang" /></td>
+        </tr>
+        <tr>
+            <td><b>Tên hàng: </b></td>
+            <td><input type="text" name="tenHang" /></td>
+        </tr>
+        <tr>
+            <td><b>Loại hàng: </b></td>
+            <td>
+                <select name="loaiHang">
+                    <option value="Quần áo">Quần áo</option>
+                    <option value="Điện tử">Điện tử</option>
+                    <option value="Gia dụng">Gia dụng</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Đơn giá: </b></td>
+            <td><input type="text" name="donGia" /></td>
+        </tr>
+        <tr>
+            <td><b>Số lượng: </b></td>
+            <td><input type="number" name="soLuong" /></td>
+        </tr>
+        <tr>
+            <td><b>Thành tiền: </b></td>
+            <td><input type="text" name="thanhTien" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Tính" />
+            </td>
+        </tr>
+    </table>
+</form>

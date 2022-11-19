@@ -1,0 +1,43 @@
+﻿@model Bai4Phieu1.Models.TienDien
+
+@{
+    ViewBag.Title = "Output";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Output</h2>
+
+<div>
+    <h4>TienDien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenChuHo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenChuHo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDienTieuThu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDienTieuThu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTien)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
