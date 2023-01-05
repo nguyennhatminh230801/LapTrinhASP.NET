@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table>
+    <tr>
+        <td>Số 1:</td>
+        <td><input type="number" id="num1"></td>
+    </tr>
+    <tr>
+        <td>Số 2:</td>
+        <td><input type="number" id="num2"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="button" id="tinh" value="Tính"/>
+        </td>
+    </tr>
+</table>
+
+<div id="message" style="font-size: large;"></div>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#tinh").click(() => {
+            var n1 = $("#num1").val();
+            var n2 = $("#num2").val();
+
+            $.ajax({
+                url: '@Url.Action("Math", "Home")?n1=' + n1 + '&n2=' + n2,
+                success: (res) => {
+                    if (res.status == "ok") {
+                        $("#message").html(res.result);
+                    }
+                },
+            });
+        })
+    })
+</script>

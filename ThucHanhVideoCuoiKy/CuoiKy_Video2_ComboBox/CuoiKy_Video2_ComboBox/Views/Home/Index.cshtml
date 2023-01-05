@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(() => {
+        $("#cboTinh").on('change', () => {
+            var id = $("#cboTinh option:selected").val();
+
+            $.ajax({
+                method: "GET",
+                data: { tinhid: id },
+                url: '@Url.Action("loadHuyen", "Home")',
+                success: (result) => {
+                    var firstOption = '<option value="-1">--Chọn 1 huyện--</option>';
+                    for (var i = 0; i < result.length; i++) {
+                        firstOption += '<option value="' + result[i].id + '">' + result[i].name + '</option>';
+                    }
+
+                    $("#cboHuyen").html(firstOption);
+                }
+            });
+        });
+
+         $("#cboHuyen").on('change', () => {
+            var id = $("#cboHuyen option:selected").val();
+
+            $.ajax({
+                method: "GET",
+                data: { tinhid: id },
+                url: '@Url.Action("loadXa", "Home")',
+                success: (result) => {
+                    var firstOption = '<option value="-1">--Chọn 1 huyện--</option>';
+                    for (var i = 0; i < result.length; i++) {
+                        firstOption += '<option value="' + result[i].id + '">' + result[i].name + '</option>';
+                    }
+
+                    $("#cboXa").html(firstOption);
+                }
+            });
+        });
+    });
+</script>
+<br />
+<h3>Tỉnh</h3>
+
+<select id="cboTinh">
+    @foreach (var t in ViewBag.Tinh)
+    {
+        <option value="@t.TinhID">@t.TenTinh</option>
+    }
+</select>
+
+<br />
+<h3>
+    Huyện
+</h3>
+<select id="cboHuyen">
+</select>
+
+<br />
+<h3>
+    Xã
+</h3>
+<select id="cboXa">
+</select>

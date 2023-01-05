@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login Ajax</h2>
+
+<table>
+    <tr>
+        <td>Username:</td>
+        <td><input type="text" id="username"></td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td><input type="text" id="password"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="button" id="login" value="Đăng Nhập" />
+        </td>
+    </tr>
+</table>
+
+<div id="message" style="font-size: large;"></div>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
+<script>
+    $(document).ready(() => {
+        $("#login").click(() => {
+            var username = $("#username").val();
+            var password = $("#password").val();
+
+            $.ajax({
+                method: "POST",
+                url: '@Url.Action("UserLogin", "Login")',
+                contentType: "application/json;charset=UTF-8",
+                data: '{"username":' + username + ',"password":' + password + '}',
+                dataType: 'html',
+                success: (response) => {
+                    $("#message").html(response);
+                },
+                error: (error) => {
+                    $("#message").html(error);
+                }
+            });
+
+            return false;
+        })
+    })
+</script>

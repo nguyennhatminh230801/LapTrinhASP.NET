@@ -1,0 +1,7 @@
+﻿@model IEnumerable<CuoiKy_Video3_PartialView.Models.Department>
+    @foreach (var item in Model)
+    {
+        var url = "/employee/department/" + item.deptid;
+        <a href="@url">@item.deptname</a>
+        <label>&nbsp;|&nbsp;</label>
+    }
